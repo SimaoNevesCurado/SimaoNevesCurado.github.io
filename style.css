@@ -31,7 +31,23 @@
     text-decoration: none;
     font-size: 1.2rem;
   }
-  .headerRight img{
+  #headerRight {
+    width:45px;
+    height:45px;
+  }
+  .github {
+    width:45px;
+    height:45px;
+  } 
+  .twitter {
+    width:45px;
+    height:45px;
+  }
+ .linkedin {
+    width:45px;
+    height:45px;
+  }
+  .insta {
     width:45px;
     height:45px;
   }
