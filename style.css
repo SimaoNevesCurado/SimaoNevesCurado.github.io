@@ -31,7 +31,7 @@
     text-decoration: none;
     font-size: 1.2rem;
   }
-  #headerRight {
+  .headerRight {
     width:45px;
     height:45px;
   }
