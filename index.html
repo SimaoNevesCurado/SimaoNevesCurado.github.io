@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Navbar</title>
-    
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
- 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <img class="logo" src="Images/logo.png" alt="Logo">
+      
+        <ul class="navigation">
+            <li class="nav-item"><a href="#"class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#"class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#"class="nav-link">Portfolio</a></li>
+            <li class="nav-item"><a href="#"class="nav-link">Courses</a></li>
+            <li class="nav-item" ><a href="#"class="nav-link">Contacts</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"> </span>
+          <span class="bar"> </span>
+          <span class="bar"> </span>
+
+        </div>
+        <div class="socials">
+            <a href=""><img src="Images/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://github.com/SimaoNevesCurado"><img src="Images/Github.png" alt="GitHub"></a>
+            <a href="https://www.instagram.com/simao.curado/"><img src="Images/Instagram.png" alt="Instagram"></a>
+            <a href="https://twitter.com/SimaoCurado"><img src="Images/twitter.png" alt="Twitter"></a>
+        </div>
+        
+    </header>
+
+    <!-- Rest of your content here -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-    <link href="style.css" rel="stylesheet" /> 
-  </head>
-  <body>
-    <div class="page-header">
-      <div class="logo">
-        <p>Logo</p>
-      </div>
-
-      <div id="navigation-bar" class="nav-bar">
-        <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Studys</a>
-      </div>
-
-      <div id="headerRight">
-    <img    src="Images/Instagram.png" alt="Instagram">
-    <img   src="Images/Github.png" alt="Github">
-    <img   src="Images/twitter.png" alt="Twitter">
-    <img   src="Images/linkedin.png" alt="LinkedIn">
-</div>
-
-  
-    </div>
-
-    <h1> goncalo cheira a pxota</h1>
-  </body>
+</body>
 </html>
