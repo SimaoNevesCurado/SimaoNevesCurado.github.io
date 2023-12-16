@@ -123,6 +123,7 @@ header .socials img {
 }
   .hamburger{
     display: block;
+    
   }
 
   .hamburger.active .bar:nth-child(2){
@@ -137,8 +138,8 @@ header .socials img {
   .navigation{
     position: fixed;
     left:-100%;
-    top:70px;
-    gap:0;
+    top: 10%;
+    gap:17px;
     flex-direction: column;
     background-color: #141414;
     width: 100%;
@@ -147,7 +148,7 @@ header .socials img {
   }
   .navigation.active{
     left:0;
-
+ 
   }
 
   .socials {
