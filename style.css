@@ -167,6 +167,7 @@ header .socials img {
 .navigation li.nav-social img {
   width: 30px;
   height: 30px;
+  flex-direction: row;
   margin-right: 10px;
 }
 
