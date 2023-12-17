@@ -2,7 +2,8 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
 }
-*{
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -26,10 +27,16 @@ header .logo {
   font-size: 1.5em;
   color: #fff;
   text-decoration: none;
+  transition: 0.3s ease;
   font-weight: 600;
   width: 55px;
   height: auto;
-  margin-left: 10%; /* adjust this as needed */
+  margin-left: 10%;
+  /* adjust this as needed */
+}
+header .logo:hover{
+
+  transform: scale(1.1);
 }
 
 header .navigation {
@@ -37,7 +44,8 @@ header .navigation {
   justify-content: center;
   flex-wrap: wrap;
   margin: 10px 0;
-  margin-left: 8%; /* adjust this as needed */
+  margin-left: 8%;
+  /* adjust this as needed */
 }
 
 header .navigation li {
@@ -50,12 +58,14 @@ header .navigation li a {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+  transition:  0.3s ease;
   letter-spacing: 1px;
-  
+
 }
 
 header .navigation li a:hover {
   color: #fff;
+  transform: scale(1.1);
 }
 
 .socials {
@@ -65,25 +75,45 @@ header .navigation li a:hover {
 header .socials img {
   position: relative;
   top: 0;
+
+  transition: 0.3s ease;
   width: 30px;
   height: 30px;
   left: 0;
   margin: 0 17px;
 }
-.hamburger{
-  display: none;
-  cursor:pointer;
+header .socials img:hover{
+
+  transform: scale(1.1);
 }
- .bar{
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.socials-items img {
+
+  display: none;
+}
+
+.socials-items {
+  display: none;
+
+
+}
+
+.bar {
   display: block;
-  width:25px;
-  height:3px;
+  width: 25px;
+  height: 3px;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #ffffff;
 }
-.navigation .nav-social{
+
+.navigation .nav-social {
   display: none;
 }
 
@@ -94,29 +124,29 @@ header .socials img {
 /* Responsive styles for medium screens */
 @media (max-width: 1201px) {
   header {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
-  
+
 
   header .logo {
-      margin-left: 1%;
+    margin-left: 1%;
   }
 
   .socials {
-      margin-left: 25px;
-      display: inline;
+    margin-left: 25px;
+    display: inline;
   }
 
   header .navigation {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 10px 0;
-      margin-left: 0%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    margin-left: 0%;
   }
- 
+
 }
 
 
@@ -125,66 +155,82 @@ header .socials img {
   header {
     flex-direction: row;
     align-items: center;
-}
-  .hamburger{
-    display: block;
-    
   }
 
-  .hamburger.active .bar:nth-child(2){
+  .hamburger {
+    display: block;
+
+  }
+
+  .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
-  .hamburger.active .bar:nth-child(1){
+
+  .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
-  .hamburger.active .bar:nth-child(3){
+
+  .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+
   .navigation {
     position: fixed;
     left: -100%;
-    top: 10%;
+    top: 8%;
     gap: 10px;
     flex-direction: column;
-    flex-wrap: nowrap; /* Ensure no wrapping */
+    flex-wrap: nowrap;
+    /* Ensure no wrapping */
     background-color: #141414;
     width: 100%;
     display: flex;
     align-items: center;
     text-align: center;
     transition: 0.3s;
-}
-
-.navigation li.nav-social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  margin-top: 10px;
-}
-
-.navigation li.nav-social img {
-  width: 20px;
-  height: 20px;
-  flex-direction: row;
-  margin-right: 10px;
-}
+  }
 
 
 
-  .navigation.active{
-    left:0;
- 
+  .navigation.active {
+    left: 0;
+
   }
 
   .socials {
-      display: none;
+    display: none;
   }
 
+
+  .socials-items {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+  }
+
+  .socials-items img {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    width: 35px;
+  
+    height: auto;
+    transition: 0.3s ease;
+    margin: 20px 0
+  }
+  .socials-items img:hover {
+
+  transform: scale(1.1);
+
+  }
+
+
+
   header .logo {
-      position: flex;
-      margin-left: 1%;
+    position: flex;
+    margin-left: 1%;
+    text-align: center;
   }
 
 }
