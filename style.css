@@ -185,16 +185,17 @@ header .socials img:hover{
   }
 
   .navigation {
-    padding-top: 55px;
+   
     position: fixed;
-    left: -100%;
+    left: -110%;
     top: 6%;
+    padding-top: 55px;
     gap: 16px;
     flex-direction: column;
     flex-wrap: nowrap;
     /* Ensure no wrapping */
     background-color: #141414;
-    width: 100%;
+    width: 110%;
     display: flex;
     align-items: center;
     text-align: center;
@@ -205,9 +206,10 @@ header .socials img:hover{
 
 
   .navigation.active {
+    margin-left: -33px;
 
     left: 0;
-
+    
   }
 
   .socials {
