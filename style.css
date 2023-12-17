@@ -1,14 +1,17 @@
+/* Resetting default styles and setting font-family */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
 }
 
+/* Applying box-sizing to all elements */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Styling the header section */
 header {
   position: absolute;
   top: 0;
@@ -22,6 +25,7 @@ header {
   background: #141414;
 }
 
+/* Styling the logo within the header */
 header .logo {
   position: relative;
   font-size: 1.5em;
@@ -31,43 +35,46 @@ header .logo {
   font-weight: 600;
   width: 55px;
   height: auto;
-  margin-left: 10%;
-  /* adjust this as needed */
+  margin-left: 10%; /* Adjust this as needed */
 }
-header .logo:hover{
 
+/* Adding hover effect to the logo */
+header .logo:hover {
   transform: scale(1.1);
 }
 
+/* Styling the navigation menu within the header */
 header .navigation {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 10px 0;
-  margin-left: 8%;
-  /* adjust this as needed */
+  margin-left: 8%; /* Adjust this as needed */
 }
 
+/* Styling individual navigation items */
 header .navigation li {
   list-style: none;
   margin: 0 16px;
 }
 
+/* Styling navigation links */
 header .navigation li a {
   color: #a9b0ab;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
-  transition:  0.3s ease;
+  transition: 0.3s ease;
   letter-spacing: 1px;
-
 }
 
+/* Adding hover effect to navigation links */
 header .navigation li a:hover {
   color: #fff;
   transform: scale(1.1);
 }
 
+/* Styling social media icons */
 .socials {
   margin-right: 5px;
 }
@@ -75,56 +82,53 @@ header .navigation li a:hover {
 header .socials img {
   position: relative;
   top: 0;
-
   transition: 0.3s ease;
   width: 30px;
   height: 30px;
   left: 0;
   margin: 0 17px;
 }
-header .socials img:hover{
 
+/* Adding hover effect to social media icons */
+header .socials img:hover {
   transform: scale(1.1);
 }
 
+/* Styling hamburger menu icon */
 .hamburger {
   display: none;
   cursor: pointer;
   transition: 0.3s ease;
-
 }
-.hamburger:hover{
+
+/* Adding hover effect to hamburger icon */
+.hamburger:hover {
   transform: scale(1.1);
 }
 
+/* Styling hidden social media items */
 .socials-items img {
-
   display: none;
 }
 
 .socials-items {
   display: none;
-
-
 }
 
+/* Styling individual bars of the hamburger icon */
 .bar {
   display: block;
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #ffffff;
 }
 
+/* Styling social navigation for larger screens */
 .navigation .nav-social {
   display: none;
 }
-
-
-
-
 
 /* Responsive styles for medium screens */
 @media (max-width: 1201px) {
@@ -132,18 +136,13 @@ header .socials img:hover{
     flex-direction: column;
     align-items: center;
   }
-
-
-
   header .logo {
     margin-left: 2%;
   }
-
   .socials {
     margin-left: 25px;
     display: inline;
   }
-
   header .navigation {
     display: flex;
     justify-content: center;
@@ -151,41 +150,34 @@ header .socials img:hover{
     margin: 10px 0;
     margin-left: 0%;
   }
-
 }
-
 
 /* Responsive styles for small screens */
 @media (max-width: 691px) {
   header {
-    flex-direction: row;    /* mudar isto*/
+    flex-direction: row;
     justify-content: space-between;
     align-content: center;
-    gap:100%
+    gap: 100%;
   }
   header .logo {
     margin-left: -45px;
   }
-
   .hamburger {
     display: block;
-
   }
-
+  /* Styling active state of hamburger bars */
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
-
   .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
-
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-
+  /* Styling navigation for small screens */
   .navigation {
-   
     position: fixed;
     left: -110%;
     top: 6%;
@@ -193,7 +185,6 @@ header .socials img:hover{
     gap: 16px;
     flex-direction: column;
     flex-wrap: nowrap;
-    /* Ensure no wrapping */
     background-color: #141414;
     width: 110%;
     display: flex;
@@ -202,46 +193,31 @@ header .socials img:hover{
     transition: 0.3s;
     z-index: -1;
   }
-
-
-
+  /* Styling active state of navigation */
   .navigation.active {
     margin-left: -33px;
-
     left: 0;
-    
   }
-
   .socials {
     display: none;
   }
-
-
+  /* Styling social media items for small screens */
   .socials-items {
     display: flex;
     flex-direction: row;
     gap: 20px;
-
   }
-
   .socials-items img {
     display: flex;
     flex-direction: row;
     cursor: pointer;
     width: 35px;
-  
     height: auto;
     transition: 0.3s ease;
-    margin: 20px 0
+    margin: 20px 0;
   }
+  /* Adding hover effect to social media items */
   .socials-items img:hover {
-
-  transform: scale(1.1);
-
+    transform: scale(1.1);
   }
-
-
-
- 
-
 }
