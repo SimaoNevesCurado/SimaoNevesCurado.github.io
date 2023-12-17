@@ -90,6 +90,11 @@ header .socials img:hover{
 .hamburger {
   display: none;
   cursor: pointer;
+  transition: 0.3s ease;
+
+}
+.hamburger:hover{
+  transform: scale(1.1);
 }
 
 .socials-items img {
@@ -131,7 +136,7 @@ header .socials img:hover{
 
 
   header .logo {
-    margin-left: 1%;
+    margin-left: 2%;
   }
 
   .socials {
@@ -153,8 +158,13 @@ header .socials img:hover{
 /* Responsive styles for small screens */
 @media (max-width: 691px) {
   header {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: row;    /* mudar isto*/
+    justify-content: space-between;
+    align-content: center;
+    gap:100%
+  }
+  header .logo {
+    margin-left: -45px;
   }
 
   .hamburger {
@@ -175,10 +185,11 @@ header .socials img:hover{
   }
 
   .navigation {
+    padding-top: 55px;
     position: fixed;
     left: -100%;
-    top: 8%;
-    gap: 10px;
+    top: 6%;
+    gap: 16px;
     flex-direction: column;
     flex-wrap: nowrap;
     /* Ensure no wrapping */
@@ -188,11 +199,13 @@ header .socials img:hover{
     align-items: center;
     text-align: center;
     transition: 0.3s;
+    z-index: -1;
   }
 
 
 
   .navigation.active {
+
     left: 0;
 
   }
@@ -227,10 +240,6 @@ header .socials img:hover{
 
 
 
-  header .logo {
-    position: flex;
-    margin-left: 1%;
-    text-align: center;
-  }
+ 
 
 }
