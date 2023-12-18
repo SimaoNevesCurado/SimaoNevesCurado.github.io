@@ -221,3 +221,47 @@ header .socials img:hover {
     transform: scale(1.1);
   }
 }
+
+ /* BODY COVER STYLES */
+ section#section.body-cover {
+  margin-top: 80px;
+  height: 600px;
+  background-color: rgb(250, 250, 250);
+
+  transition: height 0.5s, box-shadow 0.5s; /* Adiciona transição suave para height e box-shadow */
+}
+
+section#section.lastest-work {
+  height: 400px;
+  box-shadow: 0px 10px 20px -5px #252525;
+  background-color: rgb(244, 244, 244);
+  transition: height 0.5s; /* Adiciona transição suave apenas para height */
+  
+}
+
+
+#work.title{
+  margin-left:15%;
+  align-content: center;
+  gap:30px;
+  display: flex;
+  flex-direction: row;
+}
+#work.title h3{
+  font-size: 16px;
+  font-weight: 600;
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 71px;
+  color:#757575;
+  letter-spacing: 2px;
+
+}
+.line{
+  margin-top: 80px;
+  color:#666666;
+width: 30%;
+}
+ 
+
