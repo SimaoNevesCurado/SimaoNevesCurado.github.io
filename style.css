@@ -1,267 +1,201 @@
-/* Resetting default styles and setting font-family */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-}
+@import url('https://fonts.cdnfonts.com/css/just-another-courier');
 
-/* Applying box-sizing to all elements */
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 }
 
-/* Styling the header section */
+/* All STYLES OF THE HEADER ----------------------------------------------------------------------------------------------------*/
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 100px;
-  z-index: 10;
-  background: #141414;
-}
-
-/* Styling the logo within the header */
-header .logo {
-  position: relative;
-  font-size: 1.5em;
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s ease;
-  font-weight: 600;
-  width: 55px;
-  height: auto;
-  margin-left: 10%; /* Adjust this as needed */
-}
-
-/* Adding hover effect to the logo */
-header .logo:hover {
-  transform: scale(1.1);
-}
-
-/* Styling the navigation menu within the header */
-header .navigation {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 10px 0;
-  margin-left: 8%; /* Adjust this as needed */
-}
-
-/* Styling individual navigation items */
-header .navigation li {
-  list-style: none;
-  margin: 0 16px;
-}
-
-/* Styling navigation links */
-header .navigation li a {
-  color: #a9b0ab;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  transition: 0.3s ease;
-  letter-spacing: 1px;
-}
-
-/* Adding hover effect to navigation links */
-header .navigation li a:hover {
-  color: #fff;
-  transform: scale(1.1);
-}
-
-/* Styling social media icons */
-.socials {
-  margin-right: 5px;
-}
-
-header .socials img {
-  position: relative;
-  top: 0;
-  transition: 0.3s ease;
-  width: 30px;
-  height: 30px;
-  left: 0;
-  margin: 0 17px;
-}
-
-/* Adding hover effect to social media icons */
-header .socials img:hover {
-  transform: scale(1.1);
-}
-
-/* Styling hamburger menu icon */
-.hamburger {
-  display: none;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-/* Adding hover effect to hamburger icon */
-.hamburger:hover {
-  transform: scale(1.1);
-}
-
-/* Styling hidden social media items */
-.socials-items img {
-  display: none;
-}
-
-.socials-items {
-  display: none;
-}
-
-/* Styling individual bars of the hamburger icon */
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  transition: all 0.3s ease-in-out;
-  background-color: #ffffff;
-}
-
-/* Styling social navigation for larger screens */
-.navigation .nav-social {
-  display: none;
-}
-
-/* Responsive styles for medium screens */
-@media (max-width: 1201px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-  header .logo {
-    margin-left: 2%;
-  }
-  .socials {
-    margin-left: 25px;
-    display: inline;
-  }
-  header .navigation {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 10px 0;
-    margin-left: 0%;
-  }
-}
-
-/* Responsive styles for small screens */
-@media (max-width: 691px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    gap: 100%;
-  }
-  header .logo {
-    margin-left: -45px;
-  }
-  .hamburger {
-    display: block;
-  }
-  /* Styling active state of hamburger bars */
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-  /* Styling navigation for small screens */
-  .navigation {
     position: fixed;
-    left: -110%;
-    top: 6%;
-    padding-top: 55px;
-    gap: 16px;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    background-color: #141414;
-    width: 110%;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
     display: flex;
     align-items: center;
-    text-align: center;
-    transition: 0.3s;
-    z-index: -1;
-  }
-  /* Styling active state of navigation */
-  .navigation.active {
-    margin-left: -33px;
-    left: 0;
-  }
-  .socials {
-    display: none;
-  }
-  /* Styling social media items for small screens */
-  .socials-items {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-  .socials-items img {
-    display: flex;
-    flex-direction: row;
-    cursor: pointer;
-    width: 35px;
-    height: auto;
-    transition: 0.3s ease;
-    margin: 20px 0;
-  }
-  /* Adding hover effect to social media items */
-  .socials-items img:hover {
-    transform: scale(1.1);
-  }
+    padding: 25px 9%;
+    background: transparent;
 }
 
- /* BODY COVER STYLES */
- section#section.body-cover {
-  margin-top: 80px;
-  height: 600px;
-  background-color: rgb(250, 250, 250);
-
-  transition: height 0.5s, box-shadow 0.5s; /* Adiciona transição suave para height e box-shadow */
+.logo-img {
+    width: 40px;
 }
 
-section#section.lastest-work {
-  height: 400px;
-  box-shadow: 0px 10px 20px -5px #252525;
-  background-color: rgb(244, 244, 244);
-  transition: height 0.5s; /* Adiciona transição suave apenas para height */
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: #f9f9f9;
+    margin-left: 2%;
+    font-family: Courier New;
+}
+
+
+.navlist {
+    display: flex;
+    list-style: none;
+    margin-left: 100px
+}
+
+.navlist a {
+
+    color: #727478;
+    margin-left: 90px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: Courier New;
+    transition: all 0.55s ease;
+}
+
+.navlist a:hover {
+    transform: scale(1.2);
+    color: #80bffe;
+
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #80bffe;
+    display: block;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+
+}
+
+.white-dotted-square {
+    width: 70px;
+    height: 70px;
+    display: block;
+    position: absolute;
+    top: 27px;
+    right: 35px;
+    background: transparent;
+    background-image: radial-gradient(circle at center, #fff 0.15rem, transparent 0);
+    background-size: 25px 25px;
+    z-index: 1;
+
+}
+
+.dotted-square {
+    width: 150px;
+    height: 150px;
+    display: block;
+    position: absolute;
+    top: 27px;
+    right: 30px;
+    background: transparent;
+    background-image: radial-gradient(circle at center, #80bffe 0.15rem, transparent 0);
+    background-size: 25px 25px;
+
+}
+
+.dotted-line{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    top: 90%;
+    background: transparent;
+    background-image: radial-gradient(circle at center, #80bffe 0.15rem, transparent 0);
+    background-size: 25px 25px;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    z-index: 500;
+    
+}
+
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 86%;
+    right: 21%;
+    z-index: 900;
+    height: 50px;
   
+  
+    
+   
+}
+.icons i.ri-square-fill{
+
+    width: 15px;
+    color:#323239;
+    z-index: 500;
+    transition: none;
+}
+.icons i.ri-square-fill:hover{
+    color:#323239;
+    z-index: 500;
+    transform: none;
 }
 
- /* bottom body  STYLES */
-#work.title{
-  margin-left:15%;
-  align-content: center;
-  gap:30px;
-  display: flex;
-  flex-direction: row;
+
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 38px;
+    color: #80bffe;
+    top: 85.5%;
+    background-color: #fff;
+    transition: all 0.50s ease;
+    background: #323239;
 }
-#work.title h3{
-  font-size: 16px;
-  font-weight: 600;
- display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 71px;
-  color:#757575;
-  letter-spacing: 2px;
+
+.icons i:hover {
+    color: #ccd7e3;
+    transform: translateY(-5px);
+}
+
+
+
+.first {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: #323239;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
 
 }
-.line{
-  margin-top: 80px;
-  color:#666666;
-width: 30%;
-}
- 
 
+
+
+
+
+
+
+/* Hamburguer icon styles ------------------------------------------------------*/
+.hamburger {
+    display: none;
+    /* MUDAR DEPOIS*/
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hamburger:hover {
+    transform: scale(1.1);
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(39, 39, 39);
+}
+
+/* End of Hamburguer icon styles ---------------------------------------------*/
