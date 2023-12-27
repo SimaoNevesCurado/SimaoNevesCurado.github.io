@@ -1,0 +1,172 @@
+@import url('https://fonts.cdnfonts.com/css/just-another-courier');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+/* All STYLES OF THE HEADER ----------------------------------------------------------------------------------------------------*/
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 25px 9%;
+    background: transparent;
+}
+
+.first {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: #ecf0f3;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.logo-img {
+    width: 50px;
+}
+
+.navlist {
+    display: flex;
+    list-style: none;
+    position: absolute;
+    right: 10%;
+}
+
+.navlist a {
+
+    color: #636363;
+    margin-left: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.navlist a:hover {
+
+    color: #2e2e2e;
+
+}
+
+
+
+
+
+/* Hamburguer icon styles ------------------------------------------------------*/
+.hamburger {
+    display: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: absolute;
+    right: 10%;
+    top: 15px;
+}
+
+.bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(52, 52, 52);
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.main {
+    display: flex;
+}
+
+
+.main .text {
+    color: #374151;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.main .option {
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.option li {
+    list-style: none;
+    color: #6886f7;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+
+.option li span {
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+}
+
+.option li span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #ecf0f3;
+    border-left: 2px solid #6886f7;
+    animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+
+    40%,
+    60% {
+        left: calc(100% + 30px);
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navlist {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
