@@ -12,7 +12,7 @@
   --bg-color: #1c1c1d;
   --first: #fff;
   --second: #000;
-  --mob-color: #242424 ;
+  --mob-color: #252525;
 }
 
 body.dark-mode {
@@ -401,7 +401,7 @@ nav .list-darkmode-menu .hamburger.active .bar {
     font-size: 2.8em;
   }
   .home .home-info .left h4 {
-    font-size: 1.6em;
+    font-size: 1.45em;
   }
   .home .home-info .left p {
     font-size: 14px;
