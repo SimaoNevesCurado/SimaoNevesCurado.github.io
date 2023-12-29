@@ -1,178 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/667417c7ec.js" crossorigin="anonymous"></script>
-
-    <title>Simao Curado</title>
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
-            font-family: Tahoma, Geneva, Verdana, sans-serif;
-            color: white;
-            height: 100vh;
-        }
-        
-        .background {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: url("./construction.jpg") #08093cb3;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-blend-mode: darken;
-            filter: blur(10px);
-            z-index: -1;
-        }
-        
-        .container {
-            width: 600px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .top p{
-            font-size: 16px;
-            width: 160px;
-            text-align: center;
-            }
-        .top {
-            display: flex;
-            align-items: center;
-            font-weight: 900;
-            margin: 10px;
-        }
-        
-        hr {
-            width: 100px;
-            color: white;
-            border-radius: 5px;
-            margin: 0 15px
-        }
-        
-        h1 {
-            font-size: 60px;
-            text-align: center;
-            font-weight: 500;
-            letter-spacing: 2px;
-        }
-        h3{
-            margin-bottom: 10px;
-        }
-
-        .social-icons {
-            margin: 20px auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        a {
-            color: white;
-        }
-        
-        i {
-            font-size: 35px;
-            margin: 10px;
-        }
-        
-        .progress-wrapper {
-            width: 100%;
-            background: #2f2b2bc7;
-            display: flex;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-        
-        .progress {
-            width: 0%;
-            height: 10px;
-            background: white;
-            border-radius: 5px;
-            display: flex;
-            justify-content: flex-end;
-            /* transition: all 0.003 ease-in; */
-        }
-        
-        .progress span {
-            color: white;
-            position: relative;
-            top: 13px;
-            left: 25px;
-            font-weight: 800;
-        }
-        @media screen and (max-width:640px) {
-           
-            .container{
-                width: 90%;
-            }
-
-            h1 {
-            font-size: 50px;
-            }
-
-            i {
-            font-size: 25px;
-            margin: 10px;
-        }
-        }
-        @media screen and (max-width:400px) {
-            h1 {
-            font-size: 30px;
-            }
-        }
-    </style>
+   <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
-
-<body >
-    <div class="background"></div>
-    <div class="container">
-        <div class="top">
-            <hr>
-            <p>Simao Curado</p>
-            <hr>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#"><span>Simão</span> Curado</a>
+                </div>
+                <div class="list-darkmode-menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Courses</a></li>
+                    </ul>
+                    <label class="mode">
+                        <input type="checkbox" checked="checked" id="darkModeButton"/>
+                        <i class="fa-solid fa-sun"></i>
+                        <i class="fa-solid fa-moon"></i>
+                    </label>
+                    <button class="hamburger">
+                        <div class="bar"></div>
+                    </button>
+                </div>
+            </nav>
         </div>
-        <h1>UNDER CONSTRUCTION</h1>
-        <h3>PROGRESS</h3>
-        <div class="progress-wrapper">
-            <div class="progress"><span>0%</span></div>
+    </header>
+
+    <section class="home">
+        <div class="container">
+            <div class="home-info">
+                <div class="left">
+<h3> Hello, Im</h3>
+<h1>Simão Curado</h1>
+<h4>And I'm a <span class="multiple"></span></h4>
+<p> Hi, i'm currently studying Computer Science and engineering
+    on my way to become a fullstack developer
+</p>
+<div class="social">
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="#"><i class="fa-brands fa-github"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
+<div class="btn">
+    <button>Download CV</button>
+</div>
+                </div>
+                <div class="right">
+                    <div class="profile">
+                        <img src="Images/file.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="social-icons">
-            <a href="https://twitter.com/SimaoCurado"><i class="fab fa-twitter"></i></a>
-            <a href="www.linkedin.com/in/simao-curado-ba2a152a4"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/simao.curado/"><i class="fab fa-instagram"></i></a>
- 
 
-        </div>
-    </div>
-    <script>
-        const progress = document.querySelector('.progress')
-        const percentage = document.querySelector('.progress span')
+    </section>
 
-        let per = 0;
-        function progressLoad(){
-            if(per>=80){
-                progress.style.width = `80%`;
-                percentage.innerHTML = "80%"
-
-            }else{
-                progress.style.width = `${per}%`;
-                percentage.innerHTML = `${per}%`;
-
-            }
-            per++
-
-        }
-
-        setInterval(progressLoad,90)
-    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="main.js"></script>
 </body>
-
 </html>
